@@ -1,4 +1,6 @@
 
+<style>.main_footer{background:#fff}.main_footer .btn-weixin{overflow:visible}.main_footer .layer1{width:1.2rem;height:1.2rem;position:absolute;background:#fff;border-radius:50%;top:-.3rem;left:50%;box-shadow:0 0 1px 1px #eee;transform:translateX(-50%)}.main_footer .layer2{width:100%;position:absolute;background:#fff;top:0;bottom:-.05rem}.main_footer .btn-weixin .weixin-icon{z-index:15;width:.94rem;height:.94rem;line-height:.94rem;font-size:.94rem;display:inline-block;margin-top:-.2rem}</style>
+
 <div class="bui-page">
 
     <header class="bui-bar">
@@ -35,7 +37,7 @@
             </div>
         </div>
     </main>
-    <footer>
+    <footer class="main_footer">
         <ul class="bui-nav" id="tabDynamicNav">
             <li class="bui-btn bui-box-vertical active" href="pages/home/home.html">
                 <i class="custom_icon">
@@ -53,13 +55,13 @@
                     知识体系
                 </div>
             </li>
-            <li class="bui-btn bui-box-vertical" href="pages/weixin/weixin.html">
-                <i class="custom_icon">
+            <li class="bui-btn bui-box-vertical btn-weixin" href="pages/weixin/weixin.html">
+                <i class="custom_icon weixin-icon">
                    &#xe61e;
                 </i>
-                <div class="span1">
-                    微信
-                </div>
+              
+                <span class="layer1"></span>
+                <span class="layer2"></span>
             </li>
             <li class="bui-btn bui-box-vertical" href="pages/navigation/navigation.html">
                 <i class="custom_icon">
