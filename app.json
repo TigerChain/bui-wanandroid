@@ -13,10 +13,12 @@
     "!src/preview.png"
   ],
   "proxy": {
-    "/demo": {
-      "target": "http://www.easybui.com",
+    "/api": {
+      "target": "https://www.wanandroid.com",
       "changeOrigin": true,
-      "ssl": false
+      "pathRewrite":{
+        "^/api" :"https://www.wanandroid.com"
+      }
     }
   },
   "sass": {

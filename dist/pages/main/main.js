@@ -29,20 +29,23 @@ loader.define(function (require, exports, module) {
         tab.on("to", function (index) {
             switch (index) {
                 case 0:
-                    loader.require(["pages/main/home"], function (mod) {
+                    loader.require(["pages/home/home"], function (mod) {
                         // 有回调的话是每次切换都会触发, 如果home里面还有init执行,则会造成2次触发
                         // mod.init();
                     });
                     break;
                 case 1:
                     // 这里是加载脚本第一次的时候触发
-                    loader.require(["pages/main/category"]);
+                    loader.require(["pages/knowledge/knowledge"]);
                     break;
                 case 2:
-                    loader.require(["pages/main/photo"]);
+                    loader.require(["pages/weixin/weixin"]);
                     break;
                 case 3:
-                    loader.require(["pages/main/personal"]);
+                    loader.require(["pages/navigation/navigation"]);
+                    break;
+                case 4:
+                    loader.require(["pages/project/project"]);
                     break;
             }
         }).to(0);
