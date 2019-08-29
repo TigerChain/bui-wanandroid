@@ -1,3 +1,6 @@
+let baseUrl = "/api" ;
+// let baseUrl = "https://www.wanandroid.com" ;
+
 window.router = bui.router();
 
 bui.ready(function() {
