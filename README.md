@@ -22,7 +22,6 @@ bui　是一个快速开发　webapp 的移动框架，可以在主浏浏览器�
 
 ##### 手机上 apk 显示效果
 
-
 ![手机上显示玩 Android](https://dev.tencent.com/u/TigerChain/p/blog_logo/git/raw/master/bui-wanandroid/imgs/wanandroid-native.gif)
 
 由于使用 vysor 来投影手机屏幕，所以效果失真了，真实情况下不存在这种情况
