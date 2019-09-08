@@ -12,7 +12,12 @@ loader.define(function(require, exports, module) {
             methods: {
                 showDetail: function(index, e) {
                     console.log(index)
-                    console.log(e)
+                    bui.load({
+                        url:"pages/knowledge/knowledge_detail_tab.html",
+                        param:{
+                            "data": JSON.stringify(this.datas[index])
+                        } 
+                    });
                     return false;
                 }
             },
@@ -26,6 +31,7 @@ loader.define(function(require, exports, module) {
             mounted: function() {
                 // 数据解析后执行
                 // // 列表控件 js 初始化: 
+                var that = this ;
                 var uiList = bui.list({
                     id: "#knowledge-uiList",
                     url: baseUrl + "/tree/json",
@@ -40,13 +46,15 @@ loader.define(function(require, exports, module) {
                     callback: function(e) {},
                     template: function(data) {
                         // console.log(data)
+                        // bs.datas = data ;
+                        that.datas = data ;
                         var html = "";
                         data.map(function(el, index) {
                             html += `
 
                     <li class="bui-btn-title">${el.name}</li>
 
-                    <li id="knowledge-item"  style="display:flex;align-items:center;padding:10px;
+                    <li id="knowledge-item" b-click="page.showDetail(${index})" style="display:flex;align-items:center;padding:10px;
                     justify-content:space-between;">
                         <ul style="display:flex;flex-wrap:wrap">
                             ${el.children.map((child,childIndex) =>
