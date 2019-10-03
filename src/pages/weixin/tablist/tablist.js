@@ -7,28 +7,30 @@ loader.define(function(require,exports,module){
 
     pageview.initScorllList = function(idFlag,id) {
 
+        var page = 1 ;
+        var isFirst = true ;
+
     	if(scrolls[idFlag]) {
     		scrolls[idFlag].init({
     			onRefresh:onRefresh,
-    			onLoad:getData
+    			onLoad:onLoad
     		})
     	}else {
     		// 列表滚动加载 js 初始化: 
     	scrolls[idFlag] = bui.scroll({
     	    id:"#" +idFlag+ " #weixin_tab_list_uiScroll",
     	    children: "#" +idFlag+ " #weixin_tab_list_bui_list",
-    	    page:1,
-    	    pageSize:5,
     	    onRefresh: onRefresh,
-    	    onLoad: getData
+    	    onLoad: onLoad
     	})
     	}
     	
-    	
+    	scrolls[idFlag].to(0)
     	
     	//新增下一页数据
-    	function getData(page,pagesize,command){
+    	function getData(page,command){
     	  var command = command || "append";
+          console.log(command)
     	  
     	   bui.ajax({
     	       url: baseUrl +"/wxarticle/list/"+id+"/"+page+"/json",
@@ -41,9 +43,10 @@ loader.define(function(require,exports,module){
     	        // 成功
                 var mydata = result.data.datas;
                 var html = "";
+
                 mydata.map(function(el, index) {
                     html += `
-                    <li class="bui-btn">
+                    <li class="bui-btn" onclick="showDetail('${mydata[index].link}','${mydata[index].title}')">
                         <div style="display: flex;justify-content: space-between;margin-bottom: 10px;">
                             <span>
                                 Author:${el.author}
@@ -74,11 +77,31 @@ loader.define(function(require,exports,module){
     	}
     	
     	function onRefresh() {
-    		 var page = 1;
-    	        var pagesize = 5;
-    	        getData(page,pagesize,"html");
+    		  page = 1;
+    	        getData(page,"html");
     	}
+
+        function onLoad() {
+            if(isFirst){
+                onRefresh() ;
+                isFirst = false ;
+            }else {
+                page++ ;
+                getData(page,"") ;
+            }
+        }
     	
+    }
+
+    window.showDetail = function myShowDetail(link,title) {
+        console.log(link,title) ;
+        bui.load({
+            url:"pages/weixin/tablist/tablist_detail.html",
+            param:{
+                "link":link,
+                "title":title
+            } 
+        });
     }
 
 
