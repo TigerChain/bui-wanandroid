@@ -27,8 +27,23 @@ loader.define(function(require,exports,module){
     function getNavigationTab(data) {
     	var html ="" ;
     	data.map((el,index)=>{
-    		html += `<li style="border:1px solid orange;border-radius:50px;margin:5px;padding:5px 15px;">${el.name}</li>` ;
+    		html += `<li id="navigation_home_list_item" style="border:1px solid orange;border-radius:50px;margin:5px;padding:5px 15px;">${el.name}</li>` ;
     	}) ;
+
+        router.$("ul").on('click',"#navigation_home_list_item",function(e){
+            console.log(444) ;
+            var index = $(this).index() ;
+
+            var passData = JSON.stringify(data[index]) ;
+
+            bui.load({
+                url:"pages/navigation/navigation_home_list.html",
+                param:{
+                    "data":passData
+                } 
+            });
+            e.stopPropagation() ;
+        })
 
     	return html ;
     }
