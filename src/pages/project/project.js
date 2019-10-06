@@ -36,6 +36,15 @@ loader.define(function(require,exports,module){
             	var index = $(this).index() ;
             	var passData = data[index] ;
             	console.log(passData) ;
+            	var cid = passData.id ;
+            	var name = passData.name ;
+            	bui.load({
+            		url:"pages/project/project_list_detail.html",
+            		param:{
+            			"cid":cid,
+            			"title":name
+            		} 
+            	});
 
             	return false ;
 
