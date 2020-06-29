@@ -11,10 +11,11 @@
 * 04、[处理使用自定义字体图片完成 tab 的几处问题(2)](http://tigerchain.github.io/2019/08/27/bui-wanandroid-customiconfont-modify/)
 * 05、[完成微信 tab 凸起效果](http://tigerchain.github.io/2019/08/28/bui-wanandroid-weixin-tab-hump/)
 * 06、[前后端分离介绍](http://tigerchain.github.io/2019/08/29/bui-wanandroid-front-back-end-rep/)
-* 07、[请求 api 跨域问题](http://tigerchain.github.io/2019/09/03/bui-wanandroid-corss-domain/)
-* 08、[完成首页轮播效果](http://tigerchain.github.io/2019/09/03/bui-wanandroid-home-banner/)
-* 09、[完成首页列表](http://tigerchain.github.io/2019/09/03/bui-wanandroid-home-list/)
-* 10、[完成知识体系列表](http://tigerchain.github.io/2019/09/03/bui-wanandroid-knowledge-list/)
+* 07、[请求 api 跨域问题](http://tigerchain.github.io/2019/09/08/bui-wanandroid-corss-domain/)
+* 08、[完成首页轮播效果](http://tigerchain.github.io/2019/09/15/bui-wanandroid-home-banner/)
+* 09、[完成首页列表](http://tigerchain.github.io/2019/09/23/bui-wanandroid-home-list/)
+* 10、[完成知识体系列表](http://tigerchain.github.io/2019/09/27/bui-wanandroid-knowledge-list/)
+* 11、[点击事件三种实现方式](https://tigerchain.github.io/2019/09/30/bui-wanandroid-click-impl/)
 
 #### 展示效果
 
