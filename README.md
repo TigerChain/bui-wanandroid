@@ -44,6 +44,7 @@ TigerChain
 * github：[https://github.com/TigerChain](https://github.com/TigerChain)
 * 个人博客：[http://tigerchain.github.io](http://tigerchain.github.io/)
 * 简书：[https://www.jianshu.com/u/3106a1da401f](https://www.jianshu.com/u/3106a1da401f)
+* 我的 B 站：[https://space.bilibili.com/44242327/](https://space.bilibili.com/44242327/)
 
 #### 参考 
 
